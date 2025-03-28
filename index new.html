@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Memory Allocation Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Memory Allocation Tracker</h1>
+            <p class="subtitle">Monitor your system's memory usage in real-time</p>
+        </header>
+        
+        <main>
+            <div class="memory-card">
+                <h2>Total Memory</h2>
+                <div class="memory-gauge">
+                    <div class="gauge-fill" id="totalMemoryGauge"></div>
+                </div>
+                <p class="memory-value" id="totalMemory">-- GB</p>
+            </div>
+
+            <div class="memory-stats">
+                <div class="stat-card">
+                    <h3>Used Memory</h3>
+                    <p id="usedMemory">-- GB</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Available Memory</h3>
+                    <p id="availableMemory">-- GB</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Memory Usage</h3>
+                    <p id="memoryUsage">--%</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h2>Memory Usage History</h2>
+                <canvas id="memoryChart"></canvas>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
